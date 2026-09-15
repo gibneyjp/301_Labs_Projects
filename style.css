@@ -1,0 +1,42 @@
+body {
+    background-color: white;
+    color: #333333;
+    font-family: "Comic Neue", sans-serif;
+    font-size: 18px;
+    padding: 10px;
+}
+
+header, footer {
+    background-color: #fff3c4;
+    border: 1px solid #d4a72c;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px lightgray;
+    padding: 10px;
+    text-align: left;
+}
+
+h1, h2, h3 {
+    color: #4b2e83;
+    font-weight: bold;
+}
+
+nav, section, article, aside {
+    border: 1px solid #d4a72c;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+a {
+    color: #4b2e83;
+    text-decoration: underline;
+}
+
+img {
+    border: 1px solid #d4a72c;
+    border-radius: 5px;
+}
