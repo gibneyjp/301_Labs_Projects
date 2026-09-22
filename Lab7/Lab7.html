@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flexbox</title>
+        <style>
+            #parent{
+                border: 2px solid black;
+                display: flex;
+                height: 100vh;
+            }
+            #left{
+                width: 100px;
+                background-color: orange;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: left;
+                font-size: 40px;
+                margin-right: 5px;
+            }
+            #left #last-child{
+                margin-top: auto;
+            }
+            #masony{
+                flex: 1;
+                display: flex;
+                overflow-y: auto;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+            #masony img{
+                flex-grow: 1;
+            }
+        </style>
+</head>
+<body id="parent">
+    <div id="left">
+        <div> &#x1F4F7; <br> &#x1F5C4;&#xfe0f; <br> &#x2764;&#xfe0f;</div>
+        <div id="last-child"> &#x1F5D1; </div>
+    </div>
+    <div id="masony" > 
+        <img id="img1" src="https://picsum.photos/300/100?random=1" alt="Image"> 
+        <img id="img2" src="https://picsum.photos/399/100?random=2" alt="Image">
+        <img id="img3" src="https://picsum.photos/100/100?random=3" alt="Image">
+        <img id="img4" src="https://picsum.photos/306/100?random=4" alt="Image">
+        <img id="img5" src="https://picsum.photos/100/100?random=5" alt="Image">
+        <img id="img6" src="https://picsum.photos/199/100?random=6" alt="Image">
+        <img id="img7" src="https://picsum.photos/100/100?random=7" alt="Image">
+        <img id="img8" src="https://picsum.photos/204/100?random=8" alt="Image">
+        <img id="img9" src="https://picsum.photos/320/100?random=9" alt="Image">
+        <img id="img10" src="https://picsum.photos/175/100?random=10" alt="Image">
+        <img id="img11" src="https://picsum.photos/101/100?random=11" alt="Image">
+        <img id="img12" src="https://picsum.photos/200/100?random=12" alt="Image">
+        <img id="img13" src="https://picsum.photos/230/100?random=13" alt="Image">
+        <img id="img14" src="https://picsum.photos/110/100?random=14" alt="Image">
+        <img id="img15" src="https://picsum.photos/250/100?random=15" alt="Image">
+        <img id="img16" src="https://picsum.photos/160/100?random=16" alt="Image">
+        <img id="img17" src="https://picsum.photos/190/100?random=17" alt="Image">
+        <img id="img18" src="https://picsum.photos/170/100?random=18" alt="Image">
+        <img id="img19" src="https://picsum.photos/300/100?random=19" alt="Image">
+        <img id="img20" src="https://picsum.photos/150/100?random=20" alt="Image">
+    </div>
+</body>
