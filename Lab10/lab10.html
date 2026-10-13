@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <p>This is a simple webpage that prompts the user for the bill amount and tip percentage and calculates the total amount.</p>
+    <script>
+        let billAmount = Number(prompt('What is the bill amount?'));
+        let tipPercentage = 10;
+        let tipAmount = billAmount * (tipPercentage / 100);
+        document.write("The tip amount is: $" + tipAmount);
+    </script>
+</body>
+</html>
