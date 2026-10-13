@@ -23,17 +23,19 @@
         let billAmount = Number(prompt('What is the bill amount?'));
         let tipPercentage = 10;
         let tipAmount = billAmount * (tipPercentage / 100);
-        if (billAmount < 0) {
-            document.write("Negative amounts are not allowed. Please enter a valid bill amount.");
-        } if (isNaN(billAmount)) {
-            document.write("Invalid input. Please enter a numeric bill amount.");
-        } if (billAmount === 0) {
-            document.write("Please enter a bill amount greater than zero.");
-        } if (billAmount > 0) {
-            let totalAmount = billAmount + tipAmount;
-            document.write("The total tip is: $" + tipAmount.toFixed(2));
-            document.write("The total amount is: $" + totalAmount);
+        while (billAmount <= 0 || isNaN(billAmount)) {
+            if (billAmount < 0) {
+                document.write("Negative amounts are not allowed. Please enter a valid bill amount.");
+            } if (isNaN(billAmount)) {
+                document.write("Invalid input. Please enter a numeric bill amount.");
+            } if (billAmount === 0) {
+                document.write("Please enter a bill amount greater than zero.");
+            } if (billAmount > 0) {
+                let totalAmount = billAmount + tipAmount;
+                document.write("The total tip is: $" + tipAmount.toFixed(2));
+                document.write("The total amount is: $" + totalAmount);
+            }
         }
-    </script>
-</body>
+        </script>
+    </body>
 </html>
