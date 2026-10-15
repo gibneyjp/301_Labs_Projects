@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        #box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: blue;
+            width: 200px;
+        }
+        #box:hover {
+            background-color: yellow;
+        }
+        #mouseArea {
+        height: 75vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Lab 11 Page</h1>
+    <p>This is a simple webpage with a cool button.</p>
+    <div id="box">
+        <p id="name"></p>
+    </div>
+    <div id="mouseArea"></div>
+
+    <script>
+        const box = document.getElementById('box');
+        console.log(box.innerText);
+
+        const phrase = 'Click Me! 😊';
+        const name = document.getElementById('name');
+        name.textContent = phrase;
+
+        function myFunction(event) {
+            box.style.backgroundColor = 'green';
+        }
+
+        box.addEventListener('mouseover', function() {
+            name.textContent = 'Do not click! 😠';
+            box.style.backgroundColor = 'yellow';
+        });
+        box.addEventListener('mouseout', function() {
+            name.textContent = 'Phew! 😌';
+            box.style.backgroundColor = 'lightgreen';
+            });
+        box.addEventListener('click', function() {
+            name.textContent = 'Ouch! 🤕';
+            box.style.backgroundColor = 'red'
+        });
+        box.addEventListener('dblclick', function() {
+            name.textContent = 'Double trouble! 🤩';
+            box.style.backgroundColor = 'pink';
+        });
+          const mouseArea = document.getElementById("mouseArea");
+
+        mouseArea.addEventListener("mousemove", function () {
+            name.textContent = "I see you! 👀";
+            box.style.backgroundColor = "lightblue";
+        });        
+        </script>
+</body>
+</html>
