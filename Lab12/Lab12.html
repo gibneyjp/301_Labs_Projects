@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <label for="name">what is your name?</label>
+        <input type="text" id="name" name="name">
+        <button id="button" type="button">Submit</button>
+        <br>
+        <br>
+        <label for="number1">what is your number 1?</label>
+        <input type="number" id="number1" name="number1">
+        <br>
+        <br>
+        <label for="number2">what is your number 2?</label>
+        <input type="number" id="number2" name="number2">
+        <br>
+        <p> select method:</p>
+        <input type="radio" name="method" value="add"> Add <br>
+        <input type="radio" name="method" value="subtract"> Subtract <br>
+        <input type="radio" name="method" value="multiply"> Multiply <br>
+        <input type="radio" name="method" value="divide"> Divide <br>
+        <button id="select" type="button">Submit</button>
+        <button id="clear" type="submit">Clear Entries</button>
+    </form>
+    <p id="result1"></p>
+    <p id="method-result"></p>        
+    <script>
+        const name = document.getElementById('name');
+        const button = document.getElementById('button');
+        const result1 = document.getElementById('result1');
+
+        button.addEventListener('click', function(){
+            result1.textContent = `Hello, ${name.value}!`;
+        });
+
+        const number1 = document.getElementById('number1');
+        const number2 = document.getElementById('number2');
+        const method = document.getElementById('method-result');
+
+        console.log(number1.value);
+        console.log(number2.value);
+        console.log(method.value);
+
+        document.getElementById('select').addEventListener('click', function(){
+            const MyMethod = document.querySelector('input[name="method"]:checked');
+            console.log(MyMethod.value);
+            if (MyMethod.value === 'add') {
+                method.textContent = "your number is " + (Number(number1.value) + Number(number2.value));
+            } if (MyMethod.value === 'subtract') {
+                method.textContent = "your number is " + (Number(number1.value) - Number(number2.value));
+            } if (MyMethod.value === 'multiply') {
+                method.textContent = "your number is " + (Number(number1.value) * Number(number2.value));
+            } if (MyMethod.value === 'divide') {
+                method.textContent = "your number is " + (Number(number1.value) / Number(number2.value));
+            }
+        })
+    </script>
+
+</body>
+</html>
