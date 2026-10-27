@@ -1,0 +1,186 @@
+/* main page */
+body {
+    margin: 0;
+    background-color: cornsilk;
+    color: darkslategray;
+    font-family: Arial, sans-serif;
+}
+
+/* top of page */
+header {
+    background-color: darkslategray;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* heading fonts */
+header h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* nav links */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style-type: none;
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/* page content */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* main boxes */
+section,
+article,
+form {
+    background-color: white;
+    border: 2px solid goldenrod;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* home image */
+.hero {
+    position: relative;
+    padding: 0;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+}
+
+.hero p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+/* page rows */
+.two-column,
+.card-row {
+    display: flex;
+    gap: 20px;
+}
+
+.two-column section,
+.card-row article {
+    flex: 1;
+}
+
+.card-row {
+    flex-wrap: wrap;
+}
+
+/* food list */
+dt {
+    color: darkred;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+dd {
+    margin-left: 0;
+}
+
+/* stay table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid darkslategray;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: goldenrod;
+    color: black;
+}
+
+/* plan form */
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    padding: 8px;
+}
+
+button {
+    background-color: darkred;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+}
+
+a {
+    color: darkred;
+}
+
+/* top button */
+.back-to-top {
+    background-color: darkred;
+    bottom: 10px;
+    color: white;
+    padding: 8px;
+    position: fixed;
+    right: 10px;
+    text-decoration: none;
+}
+
+/* bottom of page */
+footer {
+    background-color: darkslategray;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* small screens */
+@media (max-width: 700px) {
+    nav ul,
+    .two-column,
+    .card-row {
+        flex-direction: column;
+    }
+
+    .hero p {
+        position: static;
+    }
+}
